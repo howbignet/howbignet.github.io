@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <meta name="og:image" content="http://howbignet.github.io/img/fb-cover.jpg"/>
+    <meta name="og:title" content="How Big Do I Look?" />
+    
+    <meta property="og:image" content="http://howbignet.github.io/img/fb-cover.jpg"/>
+    <meta property="og:image:secure_url" content="https://howbignet.github.io/img/fb-cover.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:title" content="How Big Do I Look?"/>
+    <meta property="og:url" content="http://howbignet.github.io/"/>
+    <meta charset=" utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>How Big Do I Look?</title>
+    
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/index.css" rel="stylesheet">
+
+
+<body>
+
+<div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=303698496335420";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+if (window.location.protocol != "http:")
+    window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);
+
+function detectmob() { 
+    if( navigator.userAgent.match(/Android/i)
+     || navigator.userAgent.match(/webOS/i)
+     || navigator.userAgent.match(/iPhone/i)
+     || navigator.userAgent.match(/iPad/i)
+     || navigator.userAgent.match(/iPod/i)
+     || navigator.userAgent.match(/BlackBerry/i)
+     || navigator.userAgent.match(/Windows Phone/i)
+     ){
+        return true;
+    }else {
+        return false;
+    }
+}
+
+
+
+</script>
+
+
+<div class="container">
+<div id="header" class="row center-block">  
+    <img id="headerimage" src="./img/logo.png">
+    <div id="headertext">
+        <div class="row">
+            <div>
+                <h1 id="picmeh1id">
+                    How-Big.net
+                </h1>
+            </div>
+            <div class="subheader">
+                HOW BIG DO I LOOK? <span id="demoSpan">#HowBigRobot</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <form role="search" id="searchform" onsubmit="javasctipt:alert('What are you thinking...');" style="margin-bottom:40px;">
+        <div class="input-group" style="background-color: white; height:20px;">
+        
+            <span class="input-group-addon" style="padding: 0px 0px 0px 0px; border: none"><img id="bLogo" class="" src="./img/bing2.png" data-bm="3"></span>
+            <input type="search" name="Search" style="border-style: none;" class="form-control" placeholder="Search Pictures..." id="searchText">
+            <div class="input-group-btn">b_searchboxSubmit
+                <input name="go" tabindex="0" title="Search" class="b_searchboxSubmit" id="searchsubmit" type="submit" value="Submit Query">
+            </div>
+           
+        </div>
+    </form>
+
+
+<div id="selectImage">
+
+    <div id="example" class="example pagespan">
+
+
+        <div class="frame" >
+            <ul>
+                <li><img src="img/test/01.jpg" data-url="img/test/01.jpg" data-json='{"state":"ok","boundingBox":["138","170","328","296"],"cup":"B"}' id="img/test/01.jpg" ></li>
+                <li><img src="img/test/02.jpg" data-url="img/test/02.jpg" data-json='{"state":"ok","boundingBox":["127","150","232","239"],"cup":"B"}' id="img/test/02.jpg" ></li>
+                <li><img src="img/test/03.jpg" data-url="img/test/03.jpg" data-json='{"state":"ok","boundingBox":["102","182","261","317"],"cup":"B"}' id="img/test/03.jpg" ></li>
+                <li><img src="img/test/04.jpg" data-url="img/test/04.jpg" data-json='{"state":"ok","boundingBox":["122","117","206","169"],"cup":"A"}' id="img/test/04.jpg" ></li>
+                <li><img src="img/test/05.jpg" data-url="img/test/05.jpg" data-json='{"state":"ok","boundingBox":["117","128","264","296"],"cup":"A"}' id="img/test/05.jpg" ></li>
+                <li><img src="img/test/06.jpg" data-url="img/test/06.jpg" data-json='{"state":"ok","boundingBox":["138","170","243","274"],"cup":"D"}' id="img/test/06.jpg" ></li>
+                <li><img src="img/test/07.jpg" data-url="img/test/07.jpg" data-json='{"state":"ok","boundingBox":["129","121","266","257"],"cup":"B"}' id="img/test/07.jpg" ></li>
+                <li><img src="img/test/08.jpg" data-url="img/test/08.jpg" data-json='{"state":"ok","boundingBox":["129","178","286","295"],"cup":"B"}' id="img/test/08.jpg" ></li>
+                <li><img src="img/test/09.jpg" data-url="img/test/09.jpg" data-json='{"state":"ok","boundingBox":["148","182","306","294"],"cup":"B"}' id="img/test/09.jpg" ></li>
+                
+            </ul>
+        </div>
+
+
+        <div id="SelectorBox"></div>
+        <div id="SelectorTag">
+            <button type="button" class="btn btn-default" onclick=" analyzeUrl() ">
+                <span class="glyphicon glyphicon-circle-arrow-right" style="margin-right: 4px" aria-hidden="true"></span>Use This Photo
+            </button>
+        </div>
+        <!--
+        <div class="scrollbar">
+            <div class="handle">
+                <div class="mousearea"></div>
+            </div>
+        </div>
+        -->
+    </div>
+
+
+    <label id="uploadLabel" class="center-block" style="width: 230px;">
+        <button id="uploadFileId" class="btn btn-default center-block action" onclick=" document.getElementById('uploadBtn').click(); ">
+            <span>
+                <img src="./img/browse-icon.svg" style="width: 25px; height: 23px">
+            </span>
+            Use your own photo
+        </button>
+        
+    </label>
+    <script> 
+        // take off the above upload button if mobile device.
+        // if (detectmob()) {
+        //     document.getElementById('uploadLabel').innerHTML = "Upload Function is not supported on mobile device." ;
+        // }
+        if (  navigator.userAgent.match('CriOS') ){
+            document.getElementById('uploadLabel').innerHTML = "Upload Function is not supported on Chrome-IOS, try Safari." ;
+        }    
+    </script>
+
+
+<input id="uploadBtn" name="photo" type="file" accept="image/*" style="visibility: hidden; width: 0px; height: 0px" />
+    <form id="uploadForm" enctype="multipart/form-data">
+        
+    </form>
+
+    
+    <p id="maxImageSize" class="help-block center-block bodyfont" style="padding-left:35px;">P.S. We won't keep your photo</p>
+
+</div><!-- #selectImage -->  
+
+
+
+<div id="results" hidden>
+    <h5 id="analyzingLabel" class="bodyfont" style="font-size: Medium; text-align: center; visibility: hidden;"></h5>
+    <div id="thumbContainer" class="center-block" style="padding-left: 0px; position: relative;">
+        
+        <img id="thumbnail" src="./img/placeholder.png" class="img-responsive center-block" onerror=" this.onerror = null;this.src = './img/placeholder.png'; "/>
+        
+        <div id="faceRecArea" class="tooltip top" role="tooltip" style="opacity:1;">
+          <div class="tooltip-arrow" style="position:absolute; top:-7px; opacity:0.6; border-top-color: #f1d100;">
+              <div class="tooltip-inner" id="tooltip-inner" style="position:inherit; top:-52px; left:-19px; font-size:30px; opacity:0.9; background-color: #f1d100; color:#d86718;">
+                ?
+              </div>
+          </div>
+
+        </div>
+
+        <div id="faces">
+            <div></div>
+        </div>
+    </div>
+    <p id="improvingLabel" class="help-block center-block bodyfont" style="font-weight: 100; font-size: 13px; text-align: center; visibility: hidden"><a class="bodyfont link-underline" href="https://www.google.com/search?safe=off&site=&tbm=isch&source=hp&biw=1024&bih=590&q=full+body&oq=full+body" target="_blank" style="font-weight: 100; font-size: 13px; text-decoration: underline">FULL BODY</a> photo might get better result.</p>
+    <button class="btn btn-default center-block action" style="margin-top: 20px; background-color: #8ed6ff;border-radius:0" onclick=" history.go(-1); ">
+        <span>
+            <img src="./img/logo.png" style="width: 25px; height: 25px" />
+        </span>
+        Try Another Photo!
+    </button>
+    <div id="jsonEventDiv" style="margin-top: 30px;" hidden>
+        <pre id="jsonEvent" style="text-align: left"></pre>
+    </div>
+</div><!-- #result --> 
+
+
+</div> <!-- container end -->
+
+
+<div id="socialId" style="height:50px; padding:15px;">
+<div class="fb-share-button" data-href="http://howbignet.github.io/" data-layout="button_count"></div>
+</div> <!-- share end -->
+
+<div id="footer" style="margin-top:10px; font-size: 14px; color:rgba(248,247,187,1); font-size:normal;">
+    The style and idea of this site are from <a href="http://how-old.net/">How-Old.net</a> </br>
+    We have no any relationship with Microsoft.
+</div> <!-- footer end -->
+
+
+<script src="./js/jquery-1.11.2.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/sly.js"></script>
+<script src="./js/load-image.all.min.js"></script>
+<script src="./js/exif.js"></script>
+<script src="./js/binaryajax.js"></script>
+<script src="./js/index.min.js"></script>
+
+<script>
+    
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-18962191-6', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

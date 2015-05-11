@@ -175,7 +175,12 @@ function detectmob() {
             <div></div>
         </div>
     </div>
-    <p id="improvingLabel" class="help-block center-block bodyfont" style="font-weight: 100; font-size: 13px; text-align: center; visibility: hidden"><a class="bodyfont link-underline" href="https://www.google.com/search?safe=off&site=&tbm=isch&source=hp&biw=1024&bih=590&q=full+body&oq=full+body" target="_blank" style="font-weight: 100; font-size: 13px; text-decoration: underline">FULL BODY</a> photo might get better result.</p>
+    
+    
+    <div style="margin-top:20px"><a id="improvingLabel" style="visibility: hidden; font-weight: bold; font-size: 15px; text-align: center; text-decoration: underline;" onclick='$("#indication").show();'>Why can't it find?</a></div>
+    <div id="indication" hidden> <p class="help-block center-block bodyfont" style="font-weight: 100; font-size: 15px; text-align: center;"> 1. The entire head and two hands must be included.</br>2. At least from the waist up.</p>
+    <img src="./img/indication.jpg" width="400" height="495" > </div>
+    
     <button class="btn btn-default center-block action" style="margin-top: 20px; background-color: #8ed6ff;border-radius:0" onclick=" history.go(-1); ">
         <span>
             <img src="./img/logo.png" style="width: 25px; height: 25px" />
@@ -187,10 +192,6 @@ function detectmob() {
     </div>
 </div><!-- #result --> 
 
-
-</div> <!-- container end -->
-
-
 <div id="socialId" style="height:50px; padding:15px;">
 <div class="fb-share-button" data-href="http://howbignet.github.io/" data-layout="button_count"></div>
 </div> <!-- share end -->
@@ -199,6 +200,11 @@ function detectmob() {
     The style and idea of this site are from <a href="http://how-old.net/">How-Old.net</a> </br>
     We have no any relationship with Microsoft.
 </div> <!-- footer end -->
+
+</div> <!-- container end -->
+
+
+
 
 
 <script src="./js/jquery-1.11.2.min.js"></script>

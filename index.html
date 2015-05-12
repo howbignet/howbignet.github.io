@@ -110,7 +110,7 @@ function detectmob() {
 
         <div id="SelectorBox"></div>
         <div id="SelectorTag">
-            <button type="button" class="btn btn-default" onclick=" analyzeUrl() ">
+            <button type="button" class="btn btn-default" onclick=" analyzeUrl(); ga('send', 'event', 'button', 'click', 'test-example');">
                 <span class="glyphicon glyphicon-circle-arrow-right" style="margin-right: 4px" aria-hidden="true"></span>Use This Photo
             </button>
         </div>
@@ -125,7 +125,7 @@ function detectmob() {
 
 
     <label id="uploadLabel" class="center-block" style="width: 230px;">
-        <button id="uploadFileId" class="btn btn-default center-block action" onclick=" document.getElementById('uploadBtn').click(); ">
+        <button id="uploadFileId" class="btn btn-default center-block action" onclick="ga('send', 'event', 'button', 'click', 'upload-photo');  document.getElementById('uploadBtn').click(); ">
             <span>
                 <img src="./img/browse-icon.svg" style="width: 25px; height: 23px">
             </span>
@@ -177,11 +177,11 @@ function detectmob() {
     </div>
     
     
-    <div style="margin-top:20px"><a id="improvingLabel" style="visibility: hidden; font-weight: bold; font-size: 15px; text-align: center; text-decoration: underline;" onclick='$("#indication").show();'>Why can't it find?</a></div>
+    <div style="margin-top:20px"><a id="improvingLabel" style="visibility: hidden; font-weight: bold; font-size: 15px; text-align: center; text-decoration: underline;" onclick="$('#indication').show(); ga('send', 'event', 'button', 'click', 'see-indication');">Why can't it find?</a></div>
     <div id="indication" hidden> <p class="help-block center-block bodyfont" style="font-weight: 100; font-size: 15px; text-align: center;"> 1. The entire head and two hands must be included.</br>2. At least from the waist up.</p>
     <img src="./img/indication.jpg" width="400" height="495" > </div>
     
-    <button class="btn btn-default center-block action" style="margin-top: 20px; background-color: #8ed6ff;border-radius:0" onclick=" history.go(-1); ">
+    <button class="btn btn-default center-block action" style="margin-top: 20px; background-color: #8ed6ff;border-radius:0" onclick="ga('send', 'event', 'button', 'click', 'try-another-photo'); history.go(-1); ">
         <span>
             <img src="./img/logo.png" style="width: 25px; height: 25px" />
         </span>
